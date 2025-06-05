@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - TechNews Central</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="article.js" defer></script>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="/" class="logo">TechNews Central</a>
+            <div class="nav-links">
+                <a href="/">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-detail-container">
+        <div class="loading">Loading article...</div>
+    </main>
+
+    <template id="article-template">
+        <article class="article-full">
+            <div class="article-header">
+                <div class="article-meta">
+                    <span class="article-category"></span>
+                    <span class="article-date"></span>
+                </div>
+                <h1 class="article-title"></h1>
+                <div class="article-source">
+                    By <span class="source-name"></span>
+                </div>
+            </div>
+
+            <div class="article-content">
+                <img class="article-main-image" alt="">
+                <div class="article-description"></div>
+                <div class="article-full-content"></div>
+            </div>
+
+            <div class="article-footer">
+                <div class="article-tags"></div>
+                <div class="share-buttons">
+                    <button onclick="shareArticle('twitter')" class="share-btn twitter">Share on Twitter</button>
+                    <button onclick="shareArticle('facebook')" class="share-btn facebook">Share on Facebook</button>
+                    <button onclick="shareArticle('linkedin')" class="share-btn linkedin">Share on LinkedIn</button>
+                </div>
+            </div>
+        </article>
+    </template>
+</body>
+</html> 

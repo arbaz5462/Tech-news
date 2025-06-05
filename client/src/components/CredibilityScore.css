@@ -1,0 +1,90 @@
+.credibility-container {
+    position: relative;
+    display: inline-block;
+}
+
+.credibility-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    border: 2px solid;
+    border-radius: 20px;
+    background: white;
+    cursor: help;
+}
+
+.score-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.trust-label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.credibility-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    z-index: 1000;
+}
+
+.credibility-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.credibility-tooltip h4 {
+    margin: 0 0 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.credibility-tooltip p {
+    margin: 0 0 12px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.tooltip-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Animation */
+.credibility-tooltip {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.credibility-badge:hover .credibility-tooltip {
+    opacity: 1;
+    transform: translate(-50%, 0);
+} 
